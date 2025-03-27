@@ -1,37 +1,157 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-div {
-  border: solid thin gray;
-} /*Temp*/
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 body {
-  display: grid;
-  grid-template-areas: "navbar navbar .";
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: rgb(126, 126, 126);
 }
-a {
-  text-decoration: none;
-  color: black;
-}
-#navbar {
-  grid-area: navbar;
 
-  border: solid thin gray; /*Temp*/
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #f4f4f4;
 }
-.navbar-button-div {
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+h1 {
+  font-weight: 900;
+  font-style: italic;
+  color: #222;
+}
+
+#hamburger-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 150px;
-  border-radius: 10px;
-  padding: 5px;
-
-  border: solid thin gray; /*Temp*/
+  width: 60px; /* Increased size for easier clicking */
+  height: 60px;
+  padding: 0;
+  background: none; /* Remove default button background */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Show a pointer cursor on hover */
 }
-.navbar-button-div:hover {
-  background-color: rgb(167, 214, 255);
-  border: solid thick black;
+
+nav {
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%); /* Börjar utanför skärmen */
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000; /* Håller den längs upp */
+  overflow-y: auto; /* Allow scrolling if content is too long */
+}
+
+nav.show {
+  transform: translateX(0);
+}
+
+#navbar-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-icon-li {
+  margin-bottom: 15px;
+}
+
+nav ul li a {
+  display: flex;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+nav ul li a:hover {
+  background-color: #e0e0e0;
+  border-left-color: blue;
+}
+#home-a {
+  border-left-color: blue;
+}
+
+main {
+  padding: 20px;
+  display: grid;
+  grid-template-areas: "sponsor";
+}
+section #sponsors {
+  grid-area: sponsor;
+}
+#sponsors-logo-container {
+  display: grid;
+  grid-template-areas:
+    "radne okm"
+    "fp .";
+  gap: 10px;
+}
+.sponsors-logo-div {
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav-menu.hidden {
+  display: none;
+}
+.hamburger-button {
+  display: block;
+}
+
+@media (min-width: 700px) {
+  #hamburger-btn {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    position: static;
+    transform: translateX(0);
+    overflow: visible;
+    padding: 0;
+  }
+
+  #nav-menu.hidden {
+    display: block;
+  }
+
+  #navbar-ul {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .navbar-icon-li {
+    margin: 0 20px;
+  }
+  nav ul li a {
+    padding: 10px;
+    min-width: 90px;
+  }
+
+  main {
+    margin-top: 0;
+  }
 }

@@ -5,37 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-    <script src="java/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <title>MKR-Karting</title>
   </head>
   <body>
-    <nav id="navbar">
-      <ul>
-        <li class="navbar-icon-li">
-          <a href="index.html">
-            <div class="navbar-button-div">
-              <span class="material-symbols-outlined">home</span>
-              <p>Hem</p>
+    <div class="container">
+      <header>
+        <button id="hamburger-btn" aria-label="Toggle Navigation">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+          </div>
+        </button>
+        <h1 class="roboto-h1">MKR Karting</h1>
+      </header>
+    
+      <nav id="nav-menu" class="hidden">
+        <ul id="navbar-ul">
+          <li class="navbar-icon-li">
+            <a id="home-a" href="index.html">
+              <div class="navbar-button-div" id="home-button-div">
+                <span class="material-symbols-outlined">home</span>
+                <p>Hem</p>
+              </div>
+            </a>
+          </li>
+          <li class="navbar-icon-li">
+            <a href="anmalan.html">
+              <div class="navbar-button-div">
+                <span class="material-symbols-outlined">edit_square</span>
+                <p>Anmälan</p>
+              </div>
+            </a>
+          </li>
+          <li class="navbar-icon-li">
+            <a href="html/tavlingsschema.html">
+              <div class="navbar-button-div">
+                <span class="material-symbols-outlined">calendar_month</span>
+                <p>Tävlingskalender</p>
+              </div>
+            </a>
+          </li>
+          <li class="navbar-icon-li">
+            <a href="html/resultat.html">
+              <div class="navbar-button-div">
+                <span class="material-symbols-outlined">trophy</span>
+                <p>Resultat</p>
+              </div>
+            </a>
+          </li>
+          <li class="navbar-icon-li">
+            <a href="html/startnummer.html">
+              <div class="navbar-button-div">
+                <span class="material-symbols-outlined">tag</span>
+                <p>Boka Startnr.</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    
+      <main>
+        <section id="sponsors">
+          <div>
+            <h3>Annonsörer:</h3>
+          </div>
+          <div id="sponsors-logo-container">
+            <div class="sponsors-logo-div" id="radne">
+              <a href="https://www.radne.se">
+                <img src="assets/Radne-logga-150.webp" alt="Radnes logotyp">
+              </a>
             </div>
-          </a>
-        </li>
-        <li class="navbar-icon-li">
-          <a href="tavlingsschema.html">
-            <div class="navbar-button-div">
-              <span class="material-symbols-outlined">calendar_month</span>
-              <p>Tävlingsschema</p>
+            <div class="sponsors-logo-div" id="okm">
+              <a href="https://www.okmkonsult.se">
+                <img src="assets/okm-konsult-228.webp" alt="OKM logotyp">
+              </a>
             </div>
-          </a>
-        </li>
-        <li class="navbar-icon-li">
-          <a href="tavlingsschema.html">
-            <div class="navbar-button-div">
-              <span class="material-symbols-outlined">calendar_month</span>
-              <p>Tävlingsschema</p>
+            <div class="sponsors-logo-div" id="fp">
+              <a href="https://www.foreningsprodukter.se">
+                <img src="assets/fp-logo-239.webp" alt="Föreningsprodukter logotyp">
+              </a>
             </div>
-          </a>
-        </li>
-      </ul>
-    </nav>
+          </div>
+        </section>
+      </main>
+    </div>
+    
   </body>
+  <script src="java/main.js" defer></script>
 </html>
