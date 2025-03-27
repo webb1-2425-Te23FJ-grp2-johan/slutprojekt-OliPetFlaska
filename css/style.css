@@ -114,6 +114,9 @@ section #sponsors {
   justify-content: center;
   align-items: center;
 }
+h2 {
+  color: #3498db;
+}
 #nav-menu.hidden {
   display: none;
 }
