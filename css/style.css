@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+div {
+  border: solid thin gray;
+} /*Temp*/
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  display: grid;
+  grid-template-areas: "navbar navbar .";
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#navbar {
+  grid-area: navbar;
+
+  border: solid thin gray; /*Temp*/
+}
+.navbar-button-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 150px;
+  border-radius: 10px;
+  padding: 5px;
+
+  border: solid thin gray; /*Temp*/
+}
+.navbar-button-div:hover {
+  background-color: rgb(167, 214, 255);
+  border: solid thick black;
+}
