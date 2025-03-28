@@ -1,10 +1,10 @@
-const hamburgerBtn = document.getElementById("hamburger-btn"); // Corrected ID.  querySelector also works
-const navMenu = document.getElementById("nav-menu"); // Corrected ID
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const navMenu = document.getElementById("nav-menu");
 const navLinks = navMenu.querySelectorAll("a");
 
 hamburgerBtn.addEventListener("click", () => {
   navMenu.classList.toggle("show");
-  navMenu.classList.toggle("hidden"); // added to hide.
+  navMenu.classList.toggle("hidden");
 });
 
 navLinks.forEach((link) => {
