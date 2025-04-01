@@ -116,12 +116,9 @@ nav ul li a:hover {
 main {
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-  "sponsor sponsor"
-  "mkr-schema .";
+  grid-template-areas: "sponsor";
 }
-#sponsors {
+section #sponsors {
   grid-area: sponsor;
 }
 #sponsors-logo-container {
