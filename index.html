@@ -12,16 +12,19 @@
     <title>MKR-Karting</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1 class="roboto-h1">MKR Karting</h1>
-        <button id="hamburger-btn" aria-label="Toggle Navigation">
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" height="2.4rem" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
-          </div>
-        </button>
-      </header>
-    
+  <header>
+    <div id="head-div">
+
+      <h1 class="roboto-h1">MKR Karting</h1>
+      <button id="hamburger-btn" aria-label="Toggle Navigation">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" height="2.4rem" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+        </div>
+      </button>
+    </div>
+  </header>
+
+     <div class="container">
       <nav id="nav-menu" class="hidden">
         <ul id="navbar-ul">
           <li class="navbar-icon-li">
@@ -52,7 +55,7 @@
             <a href="html/resultat.html">
               <div class="navbar-button-div">
                 <span class="material-symbols-outlined">trophy</span>
-                <p>Resultat</p>
+                <p>Resultat & Statistik</p>
               </div>
             </a>
           </li>
@@ -69,9 +72,9 @@
     
       <main>
         <section id="sponsors">
-          <div>
+          
             <h2>Annonsörer:</h2>
-          </div>
+          
           <div id="sponsors-logo-container">
             <div class="sponsors-logo-div" id="radne">
               <a href="https://www.radne.se">
@@ -90,9 +93,9 @@
             </div>
           </div>
         </section>
-        <section>
-          <h2>Här finns årets schema</h2>
-          <ul>
+        <section id="mkr-schema">
+          <h2>MKR Serien 2025:</h2>
+          <ol>
             <li>
               <p>Linköping 3-4/5</p>
             </li>
@@ -117,9 +120,15 @@
             <li>
               <p>Rasbo 20-21/9</p>
             </li>
-          </ul>
+          </ol>
         </section>
       </main>
+      <footer>
+        <div>
+          MKR Karting © 2025
+        </div>
+        <a href="">Contact / About</a>
+      </footer>
     </div>
     
   </body>

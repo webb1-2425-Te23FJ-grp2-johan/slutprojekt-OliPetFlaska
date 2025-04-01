@@ -15,7 +15,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
-  background: rgb(126, 126, 126);
+  background: #ebebeb
 }
 h1 {
   font-size: 2rem;
@@ -32,13 +32,25 @@ p {
   margin: 0 auto;
   background-color: #f4f4f4;
 }
+header{
+  background-image: linear-gradient(to bottom, #3498db 0%, #f4f4f4 100%);
+}
+footer {
+  background-image: linear-gradient(to bottom, #f4f4f4 0%, #3498db 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-header {
+  min-height: 100px;
+}
+#head-div {
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-image: linear-gradient(to bottom, #cfd9df 0%, #a6d7f0 100%);
+  max-width: 1200px;
 }
 #hamburger-btn {
   display: flex;
@@ -100,9 +112,13 @@ nav ul li a:hover {
 main {
   padding: 20px;
   display: grid;
-  grid-template-areas: "sponsor";
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "sponsor sponsor"
+  "mkr-schema .";
+  height: 100%;
 }
-section #sponsors {
+#sponsors {
   grid-area: sponsor;
 }
 #sponsors-logo-container {
@@ -124,9 +140,13 @@ h2 {
 #nav-menu.hidden {
   display: none;
 }
-.hamburger-button {
-  display: block;
+#mkr-schema {
+  grid-area: mkr-schema;
 }
+ol {
+  padding-left: 20px;
+}
+
 
 @media (min-width: 700px) {
   #hamburger-btn {
@@ -147,7 +167,6 @@ h2 {
 
   #navbar-ul {
     display: flex;
-    margin-top: 10px;
   }
 
   .navbar-icon-li {
