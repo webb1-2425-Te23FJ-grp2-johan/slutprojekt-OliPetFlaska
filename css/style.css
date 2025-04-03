@@ -123,16 +123,19 @@ nav ul li a:hover {
 main {
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas: 
-  "sponsor sponsor"
-  "mkr-schema .";
+  "sponsor"
+  "mkr-schema"
+  "fb-page";
+  gap: 20px;
 }
 #sponsors {
   grid-area: sponsor;
 }
 #sponsors-logo-container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "radne okm"
     "fp .";
@@ -152,14 +155,33 @@ h2 {
 }
 #mkr-schema {
   grid-area: mkr-schema;
+}
+#mkr-schema-wrapper {
   padding: 10px;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
 }
 ol {
   padding-left: 20px;
 }
+.fb-page {
+  grid-area: fb-page;
+  text-align: center;
+}
 
 
 @media (min-width: 700px) {
+  main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "sponsor sponsor"
+    "mkr-schema fb-page";
+    gap: 50px;
+    margin-top: 0;
+  }
   #hamburger-btn {
     display: none;
   }
@@ -200,9 +222,7 @@ ol {
       "radne okm fp";
     gap: 10px;
   }
-  main {
-    margin-top: 0;
-  }
+  
 }
 @media (min-width: 1000px){
   .large-icon {
