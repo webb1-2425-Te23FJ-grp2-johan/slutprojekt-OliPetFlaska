@@ -29,7 +29,7 @@ p {
   font-size: 1.2rem;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   height: 100%;
   margin: 0 auto;
   background-color: #f4f4f4;
@@ -38,6 +38,10 @@ header{
   background-image: linear-gradient(to bottom, #3498db 0%, #f4f4f4 100%);
 }
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-image: linear-gradient(to bottom, #f4f4f4 0%, #3498db 100%);
   display: flex;
   flex-direction: column;
@@ -51,7 +55,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 #hamburger-btn {
   display: flex;
@@ -115,7 +119,7 @@ nav ul li a:hover {
   border-left-color: var(--main-bd-color);
 }
 #current-site {
-  border-left-color: var(--main-bd-color);
+  border-bottom-color: var(--main-bd-color);
 }
 .line {
   border-top: solid 1px;
@@ -169,7 +173,9 @@ ol {
   grid-area: fb-page;
   text-align: center;
 }
-
+#showcase {
+  display: none;
+}
 
 @media (min-width: 700px) {
   main {
@@ -178,7 +184,8 @@ ol {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "sponsor sponsor"
-    "mkr-schema fb-page";
+    "mkr-schema fb-page"
+    "showcase showcase";
     gap: 50px;
     margin-top: 0;
   }
@@ -222,7 +229,16 @@ ol {
       "radne okm fp";
     gap: 10px;
   }
-  
+  #showcase {
+    display: block;
+    grid-area: showcase;
+  }
+  .gallery {
+    display: flex;
+  }
+  #bild1, #bild2 {
+    width: 50%;
+  }
 }
 @media (min-width: 1000px){
   .large-icon {
