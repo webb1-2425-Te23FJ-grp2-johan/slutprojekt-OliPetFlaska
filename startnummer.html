@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/simple-lightbox.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- <--Onödig? /!-->
     <title>MKR-Karting</title>
   </head>
   <body>
@@ -26,7 +26,7 @@
       <nav id="nav-menu" class="hidden">
         <ul id="navbar-ul">
           <li class="navbar-icon-li">
-            <a id="current-site" href="index.html">
+            <a href="index.html">
               <div class="navbar-button-div">
                 <span class="small-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
@@ -80,7 +80,7 @@
           </li>
           <li class="line"></li>
           <li class="navbar-icon-li">
-            <a href="startnummer.html">
+            <a id="current-site" href="startnummer.html">
               <div class="navbar-button-div">
                 <span class="small-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m240-160 40-160H120l20-80h160l40-160H180l20-80h160l40-160h80l-40 160h160l40-160h80l-40 160h160l-20 80H660l-40 160h160l-20 80H600l-40 160h-80l40-160H360l-40 160h-80Zm140-240h160l40-160H420l-40 160Z"/></svg>
@@ -117,11 +117,8 @@
           </div>
         </section>
 
-       
 
-      </main>
-    </div>
-
+        
       <footer>
         <div>
           MKR Karting © 2025
@@ -131,4 +128,5 @@
   </body>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v22.0"></script>
   <script src="java/main.js" defer></script>
+  <script src="java/simple-lightbox.min.js"></script>
 </html>
