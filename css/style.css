@@ -6,6 +6,8 @@
 :root {
   --main-bg-color: #f4f4f4;
   --main-bd-color: rgb(0, 0, 255);
+  --nav-menu-color: #f0f0f0;
+  --button-hover-color: #e0e0e0;
   font-size: 16px;
 }
 img {
@@ -69,8 +71,8 @@ footer {
   cursor: pointer;
 }
 
-nav {
-  background-color: #f0f0f0;
+#nav-menu {
+  background-color: var(--nav-menu-color);
   padding: 20px;
   position: fixed;
   top: 0;
@@ -82,7 +84,7 @@ nav {
   z-index: 1000;
 }
 
-nav.show {
+#nav-menu.show {
   transform: translateX(0);
 }
 
@@ -114,8 +116,8 @@ nav ul li a {
 .large-icon {
   display: none;
 }
-nav ul li a:hover {
-  background-color: #e0e0e0;
+#nav-menu ul li a:hover {
+  background-color: var(--button-hover-color);
   border-left-color: var(--main-bd-color);
 }
 #current-site {
@@ -131,8 +133,9 @@ main {
   grid-template-areas: 
   "sponsor"
   "mkr-schema"
-  "fb-page";
-  gap: 20px;
+  "fb-page"
+  "anmalan";
+  /* gap: 20px; */
 }
 #sponsors {
   grid-area: sponsor;
@@ -185,14 +188,14 @@ ol {
     grid-template-areas: 
     "sponsor sponsor"
     "mkr-schema fb-page"
-    "showcase showcase";
-    gap: 50px;
+    "showcase showcase"
+    "anmalan anmalan";
     margin-top: 0;
   }
   #hamburger-btn {
     display: none;
   }
-  nav {
+  #nav-menu {
     display: block;
     position: static;
     transform: translateX(0);
@@ -216,7 +219,7 @@ ol {
   .navbar-icon-li {
     margin: 0 20px;
   }
-  nav ul li a {
+  #nav-menu ul li a {
     padding: 0;
   }
   #current-site {
@@ -247,7 +250,51 @@ ol {
   .small-icon {
     display: flex;
   }
-  nav ul li a {
+  #nav-menu ul li a {
     padding: 10px;
   }
+}
+/* --- Anmälningssida --- */
+#anmalan-section {
+  grid-area: anmalan;
+  padding-top: 50px;
+}
+.tavling-container {
+  border: solid thin black;
+  padding: 10px;
+}
+#anmalan-nav {
+  background-color: var(--nav-menu-color);
+  display: flex;
+  padding: 10px;
+}
+#anmalan-nav a{
+  padding: 10px;
+  border: solid thin black;
+  margin-right: 5px;
+}
+#anmalan-nav a:hover{
+  background-color: var(--button-hover-color);
+}
+.tavlingsklasser {
+  display: flex;
+  justify-content: space-between;
+  border: solid thin gray;
+  display: flex;
+  padding: 5px;
+}
+.tavlingsklass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.tavlingsklasser a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+.tavlingsklasser a:hover {
+  background-color: var(--button-hover-color);
 }
