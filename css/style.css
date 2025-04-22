@@ -2,12 +2,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  max-width: 100%;
 }
 :root {
   --main-bg-color: #f4f4f4;
   --main-bd-color: rgb(0, 0, 255);
   --nav-menu-color: #f0f0f0;
   --button-hover-color: #e0e0e0;
+  --table-odd-color: #f7fafc;
   font-size: 16px;
 }
 img {
@@ -138,17 +140,17 @@ main {
   "mkr-schema"
   "fb-page"
   "anmalan";
-  /* gap: 20px; */
 }
 #sponsors {
   grid-area: sponsor;
 }
 #sponsors-logo-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "radne okm"
-    "fp .";
+    "radne" 
+    "okm"
+    "fp";
   gap: 10px;
 }
 .sponsors-logo-div {
@@ -156,6 +158,16 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+}
+#radne {
+  grid-area: radne;
+}
+#okm {
+  grid-area: okm;
+}
+#fp {
+  grid-area: fp;
 }
 h2 {
   color: #3498db;
@@ -235,7 +247,7 @@ section.fb-page {
     border-bottom-color: var(--main-bd-color);
   }
   #sponsors-logo-container {
-    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "radne okm fp";
     gap: 10px;
@@ -273,18 +285,19 @@ section.fb-page {
 .tavling-container {
   border: solid thin black;
   padding: 10px;
+  margin-bottom: 30px;
 }
-#anmalan-nav {
+.anmalan-nav {
   background-color: var(--nav-menu-color);
   display: flex;
   padding: 10px;
 }
-#anmalan-nav a{
+.anmalan-nav a{
   padding: 10px;
   border: solid thin black;
   margin-right: 5px;
 }
-#anmalan-nav a:hover{
+.anmalan-nav a:hover{
   background-color: var(--button-hover-color);
 }
 .tavlingsklasser {
@@ -299,6 +312,7 @@ section.fb-page {
   justify-content: center;
   align-items: center;
   text-align: center;
+  min-width: 45px;
 }
 .tavlingsklasser a {
   display: flex;
@@ -308,4 +322,32 @@ section.fb-page {
 }
 .tavlingsklasser a:hover {
   background-color: var(--button-hover-color);
+}
+
+/* Table Sida */
+#table-container {
+  font-family: 'Inter', sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 80px;
+}
+.table-header th {
+  background-color: #f7fafc;
+  color: #4a5568;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e2e8f0;
+}
+.table-row td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.table-row:nth-child(odd) {
+  background-color: var(--table-odd-color);
+}
+.table-row:hover {
+  background-color: var(--button-hover-color);
+  transition-duration: 0.3s;
 }

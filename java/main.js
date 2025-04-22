@@ -10,7 +10,7 @@ hamburgerBtn.addEventListener("click", () => {
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("show");
-    navMenu.classList.add("hidden"); // added to hide.
+    navMenu.classList.add("hidden");
   });
 });
 
