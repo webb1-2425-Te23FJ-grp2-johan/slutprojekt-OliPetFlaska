@@ -41,6 +41,9 @@ section {
   margin: 0 auto;
   background-color: #f4f4f4;
 }
+.wrapper {
+  margin-bottom: 85px;
+}
 header{
   background-image: linear-gradient(to bottom, #3498db 0%, #f4f4f4 100%);
 }
@@ -118,7 +121,7 @@ nav ul li a {
 .small-icon {
   display: flex;
 }
-.large-icon {
+.large-icon, .wide-list {
   display: none;
 }
 #nav-menu ul li a:hover {
@@ -247,7 +250,7 @@ section.fb-page {
     border-bottom-color: var(--main-bd-color);
   }
   #sponsors-logo-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       "radne okm fp";
     gap: 10px;
@@ -261,6 +264,12 @@ section.fb-page {
   }
   #bild1, #bild2 {
     width: 50%;
+  }
+  .wide-list {
+    display: block;
+  }
+  .skinny-list {
+    display: none;
   }
 }
 @media (min-width: 1000px){
@@ -278,9 +287,11 @@ section.fb-page {
   }
 }
 /* --- Anmälningssida --- */
-#anmalan-section {
+#tavlingar-section {
   grid-area: anmalan;
   padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .tavling-container {
   border: solid thin black;
@@ -327,9 +338,7 @@ section.fb-page {
 /* Table Sida */
 #table-container {
   font-family: 'Inter', sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 80px;
+  padding: 0 20px;
 }
 .table-header th {
   background-color: #f7fafc;
