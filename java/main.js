@@ -14,4 +14,4 @@ navLinks.forEach((link) => {
   });
 });
 
-let lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+var lightbox = new SimpleLightbox('.gallery a', { /* options */ });

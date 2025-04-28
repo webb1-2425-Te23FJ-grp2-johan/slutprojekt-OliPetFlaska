@@ -2,14 +2,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  max-width: 100%;
+  /*max-width: 100%;*/
 }
 :root {
   --main-bg-color: #f4f4f4;
+  --secondary-bg-color: #4e8098;
   --main-bd-color: rgb(0, 0, 255);
   --nav-menu-color: #f0f0f0;
   --button-hover-color: #e0e0e0;
   --table-odd-color: #f7fafc;
+
+  --color-1: #092327;
+  --color-2: #0b5351;
+  --color-3: #00a9a5;
+  --color-4: #4e8098;
+  --color-5: #90c2e7;
   font-size: 16px;
 }
 img {
@@ -21,7 +28,8 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
-  background: var(--main-bg-color);
+  background-color: ;
+  background: var(--secondary-bg-color);
 }
 h1 {
   font-size: 2rem;
@@ -39,25 +47,31 @@ section {
   max-width: 1000px;
   height: 100%;
   margin: 0 auto;
-  background-color: #f4f4f4;
+  background-color: var(--main-bg-color);
 }
 .wrapper {
   margin-bottom: 85px;
 }
-header{
-  background-image: linear-gradient(to bottom, #3498db 0%, #f4f4f4 100%);
+header {
+  background-image: linear-gradient(
+    to bottom,
+    var(--secondary-bg-color) 0%,
+    var(--main-bg-color) 100%
+  );
 }
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-image: linear-gradient(to bottom, #f4f4f4 0%, #3498db 100%);
+  border-top: solid var(--color-3);
+  /*  background-image: linear-gradient(to bottom, var(--main-bg-color) 0%, var(--secondary-bg-color) 100%); */
+  background-color: var(--color-5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 65px;
 }
 #head-div {
   margin: auto;
@@ -121,7 +135,8 @@ nav ul li a {
 .small-icon {
   display: flex;
 }
-.large-icon, .wide-list {
+.large-icon,
+.wide-list {
   display: none;
 }
 #nav-menu ul li a:hover {
@@ -138,11 +153,11 @@ main {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 
-  "sponsor"
-  "mkr-schema"
-  "fb-page"
-  "anmalan";
+  grid-template-areas:
+    "sponsor"
+    "mkr-schema"
+    "fb-page"
+    "anmalan";
 }
 #sponsors {
   grid-area: sponsor;
@@ -151,7 +166,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "radne" 
+    "radne"
     "okm"
     "fp";
   gap: 10px;
@@ -173,7 +188,7 @@ main {
   grid-area: fp;
 }
 h2 {
-  color: #3498db;
+  color: var(--color-3);
 }
 #nav-menu.hidden {
   display: none;
@@ -205,11 +220,11 @@ section.fb-page {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "sponsor sponsor"
-    "mkr-schema fb-page"
-    "showcase showcase"
-    "anmalan anmalan";
+    grid-template-areas:
+      "sponsor sponsor"
+      "mkr-schema fb-page"
+      "showcase showcase"
+      "anmalan anmalan";
     margin-top: 0;
   }
   section {
@@ -233,7 +248,7 @@ section.fb-page {
   #navbar-ul {
     display: flex;
   }
-  .large-icon{
+  .large-icon {
     display: block;
   }
   .small-icon {
@@ -251,8 +266,7 @@ section.fb-page {
   }
   #sponsors-logo-container {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "radne okm fp";
+    grid-template-areas: "radne okm fp";
     gap: 10px;
   }
   #showcase {
@@ -262,7 +276,8 @@ section.fb-page {
   .gallery {
     display: flex;
   }
-  #bild1, #bild2 {
+  #bild1,
+  #bild2 {
     width: 50%;
   }
   .wide-list {
@@ -272,7 +287,7 @@ section.fb-page {
     display: none;
   }
 }
-@media (min-width: 1000px){
+@media (min-width: 1000px) {
   section {
     padding-top: 25px;
   }
@@ -292,6 +307,7 @@ section.fb-page {
   padding-top: 50px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 5px;
 }
 .tavling-container {
   border: solid thin black;
@@ -303,12 +319,12 @@ section.fb-page {
   display: flex;
   padding: 10px;
 }
-.anmalan-nav a{
+.anmalan-nav a {
   padding: 10px;
   border: solid thin black;
   margin-right: 5px;
 }
-.anmalan-nav a:hover{
+.anmalan-nav a:hover {
   background-color: var(--button-hover-color);
 }
 .tavlingsklasser {
@@ -337,7 +353,7 @@ section.fb-page {
 
 /* Table Sida */
 #table-container {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 0 20px;
 }
 .table-header th {
