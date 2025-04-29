@@ -8,92 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
-            /*padding: 24px;  Tailwind's p-6 */
-        }
-        .container {
-            max-width: 100%;
-            padding-left: 20px;
-            padding-right: 20px;
-            margin-left: auto; /* Tailwind's mx-auto */
-            margin-right: auto; /* Tailwind's mx-auto */
-            border-radius: 8px; /* Tailwind's rounded-lg */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Tailwind's shadow-md */
-            background-color: #ffffff; /* Tailwind's bg-white */
-            padding: 24px; /* Tailwind's p-6 */
-        }
-        .heading-1 {
-            font-size: 1.875rem; /* Tailwind's text-3xl */
-            font-weight: 600; /* Tailwind's font-semibold */
-            color: #4a5568; /* Tailwind's text-gray-800 */
-            text-align: center; /* Tailwind's text-center */
-            margin-bottom: 2rem; /* Tailwind's mb-8 */
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr; /* Tailwind's grid-cols-1 */
-            gap: 2rem; /* Tailwind's gap-8 */
-        }
-        @media (min-width: 768px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr); /* Tailwind's md:grid-cols-2 */
-            }
-        }
-        @media (min-width: 1024px) {
-            .grid-container {
-                grid-template-columns: repeat(3, 1fr); /* Tailwind's lg:grid-cols-3 */
-            }
-        }
-        .card {
-            background-color: #ffffff; /* Tailwind's bg-white */
-            border-radius: 8px; /* Tailwind's rounded-lg */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Tailwind's shadow-md */
-            padding: 24px; /* Tailwind's p-6 */
-        }
-        .card-title {
-            font-size: 1.25rem; /* Tailwind's text-xl */
-            font-weight: 600; /* Tailwind's font-semibold */
-            color: #4a5568; /* Tailwind's text-gray-700 */
-            margin-bottom: 1rem; /* Tailwind's mb-4 */
-        }
-        .list-item {
-            padding-top: 0.5rem; /* Tailwind's pt-2 */
-            padding-bottom: 0.5rem; /* Tailwind's pb-2 */
-        }
-        .list-link {
-            color: #2563eb; /* Tailwind's text-blue-600 */
-            text-decoration: underline; /* Tailwind's underline */
-        }
-        .list-link:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body class="bg-gray-100 p-6">
+  <div class="container wrapper">
   <header>
     <div id="head-div">
       <h1 class="roboto-h1">MKR Karting</h1>
       <a id="hamburger-btn" aria-label="Toggle Navigation">
         <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="2.4rem"
-            viewBox="0 -960 960 960"
-            width="48px"
-            fill="#000000"
-          >
-            <path
-              d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
-            />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="2.4rem" viewBox="0 -960 960 960" width="48px" fill="#fff"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
         </div>
       </a>
     </div>
   </header>
-  <div class="container wrapper">
     <nav id="nav-menu" class="hidden">
       <ul id="navbar-ul">
         <li class="navbar-icon-li">
@@ -267,39 +194,40 @@
         </li>
       </ul>
     </nav>
-    <h1 class="heading-1">MKR Resultat</h1>
-    <div class="container">
+    <div class="wrapper">
+      <section id="results">
+        <h2>Resultat</h2>
         <div class="grid-container">
-            <div class="card">
-                <h2 class="card-title">2025</h2>
-                <ul class="space-y-2">
-                    <li class="list-item"><a href="#" class="list-link">Serieresultat MKR 2025</a></li>
-                    <li class="list-item"><a href="#" class="list-link">Lagresultat MKR 2025</a></li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2 class="card-title">2024</h2>
-                <ul class="space-y-2">
-                    <li class="list-item"><a href="#" class="list-link">Serieresultat MKR 2024</a></li>
-                    <li class="list-item"><a href="#" class="list-link">Lagresultat MKR 2024</a></li>
-                    <li class="list-item"><a href="#" class="list-link">MKR 1 / RMC 3 / Raket Trophy, 4-5/5 2024, SMK Västerås Karting</a></li>
-                    <li class="list-item"><a href="#" class="list-link">MKR 2 / Chicken race - Lördag, 18/5 2024, Rasbo MK</a></li>
-                    <li class="list-item"><a href="#" class="list-link">MKR 2 / Chicken race - Söndag, 19/5 2024, Rasbo MK</a></li>
-                    <li class="list-item"><a href="#" class="list-link">MKR 3, 1-2/6 2024, Katrineholms MK</a></li>
-                    <li class="list-item"><a href="#" class="list-link">MKR 4 15-16/6, 15-16/6 2024, Södertälje KRC</a></li>
-                     <li class="list-item"><a href="#" class="list-link">MKR 6 / RMC 5, 24-25/8 2024, Järfälla MK</a></li>
-                    <li class="list-item"><a href="#" class="list-link">MKR 5 - Borlänge MK, 2024-08-17/18 2024, Borlänge MK</a></li>
-                    <li class="list-item"><a href="#" class="list-link">MKR 7, 7-8 september 2024, Linköpings MS</a></li>
-                    <li class="list-item"><a href="#" class="list-link">Mkr8 2024, 21-22/9 2024, Rasbo MK</a></li>
-                    <li class="list-item"><a href="#" class="list-link">Serieresultat RMC 2024</a></li>
-                    <li class="list-item"><a href="#" class="list-link">Lagresultat RMC 2024</a></li>
-                    <li class="list-item"><a href="#" class="list-link">Stockholm Race Weekend (SRW), 27-28 april 2024, Järfälla MK</a></li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2 class="card-title">2023</h2>
-                <ul class="space-y-2">
-                    <li class="list-item"><a href="#" class="list-link">Serieresultat MKR 2023</a></li>
+          <div class="card">
+            <h2 class="card-title">2025</h2>
+            <ul class="space-y-2">
+              <li class="list-item"><a href="#" class="list-link">Serieresultat MKR 2025</a></li>
+              <li class="list-item"><a href="#" class="list-link">Lagresultat MKR 2025</a></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2 class="card-title">2024</h2>
+            <ul class="space-y-2">
+              <li class="list-item"><a href="#" class="list-link">Serieresultat MKR 2024</a></li>
+              <li class="list-item"><a href="#" class="list-link">Lagresultat MKR 2024</a></li>
+              <li class="list-item"><a href="#" class="list-link">MKR 1 / RMC 3 / Raket Trophy, 4-5/5 2024, SMK Västerås Karting</a></li>
+              <li class="list-item"><a href="#" class="list-link">MKR 2 / Chicken race - Lördag, 18/5 2024, Rasbo MK</a></li>
+              <li class="list-item"><a href="#" class="list-link">MKR 2 / Chicken race - Söndag, 19/5 2024, Rasbo MK</a></li>
+              <li class="list-item"><a href="#" class="list-link">MKR 3, 1-2/6 2024, Katrineholms MK</a></li>
+              <li class="list-item"><a href="#" class="list-link">MKR 4 15-16/6, 15-16/6 2024, Södertälje KRC</a></li>
+              <li class="list-item"><a href="#" class="list-link">MKR 6 / RMC 5, 24-25/8 2024, Järfälla MK</a></li>
+              <li class="list-item"><a href="#" class="list-link">MKR 5 - Borlänge MK, 2024-08-17/18 2024, Borlänge MK</a></li>
+              <li class="list-item"><a href="#" class="list-link">MKR 7, 7-8 september 2024, Linköpings MS</a></li>
+              <li class="list-item"><a href="#" class="list-link">Mkr8 2024, 21-22/9 2024, Rasbo MK</a></li>
+              <li class="list-item"><a href="#" class="list-link">Serieresultat RMC 2024</a></li>
+              <li class="list-item"><a href="#" class="list-link">Lagresultat RMC 2024</a></li>
+              <li class="list-item"><a href="#" class="list-link">Stockholm Race Weekend (SRW), 27-28 april 2024, Järfälla MK</a></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2 class="card-title">2023</h2>
+            <ul class="space-y-2">
+              <li class="list-item"><a href="#" class="list-link">Serieresultat MKR 2023</a></li>
                     <li class="list-item"><a href="#" class="list-link">Lagresultat MKR 2023</a></li>
                     <li class="list-item"><a href="#" class="list-link">MKR1 / RMC 3 6/5 Lördag, 2023-05-06 2023, SMK Västerås Karting</a></li>
                     <li class="list-item"><a href="#" class="list-link">MKR 1 / RMC 3 7/5 Söndag, 2023-05-07 2023, SMK Västerås Karting</a></li>
@@ -311,18 +239,19 @@
                     <li class="list-item"><a href="#" class="list-link">MKR 6, 19-20/8 2023, Katrineholms MK</a></li>
                     <li class="list-item"><a href="#" class="list-link">MKR 7 med IAME och SKL, 2-3 september 2023, Linköpings MS</a></li>
                     <li class="list-item"><a href="#" class="list-link">MKR 8 FINAL - KCV 4, 16-17:e September 2023, Skövde MK</a></li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2 class="card-title">2022</h2>
-                <ul class="space-y-2">
+                  </ul>
+                </div>
+                <div class="card">
+                  <h2 class="card-title">2022</h2>
+                  <ul class="space-y-2">
                     <li class="list-item"><a href="#" class="list-link">Serieresultat MKR 2022</a></li>
                     <li class="list-item"><a href="#" class="list-link">Lagresultat MKR 2022</a></li>
                     <li class="list-item"><a href="#" class="list-link">MKB1 / BMC 2 7/5 2022 SMK Västerås Karting</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
     <footer>
       <div>MKR Karting © 2025</div>
       <a href="">Contact / About</a>
