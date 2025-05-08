@@ -13,5 +13,3 @@ navLinks.forEach((link) => {
     navMenu.classList.add("hidden");
   });
 });
-
-var lightbox = new SimpleLightbox('.gallery a', { /* options */ });

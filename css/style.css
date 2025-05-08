@@ -35,6 +35,7 @@ body {
   /* background: var(--secondary-color); */
 }
 h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2rem;
   font-weight: 900;
   font-style: italic;
@@ -52,7 +53,7 @@ section {
   background-color: var(--light-gray);
 }
 .wrapper {
-  margin-bottom: 65px;
+  margin-bottom: 80px;
 }
 header {
   color: white;
@@ -137,6 +138,7 @@ nav ul li a {
 .small-icon {
   display: flex;
 }
+
 .large-icon,
 .wide-list {
   display: none;
@@ -159,7 +161,8 @@ main {
     "sponsor"
     "mkr-schema"
     "fb-page"
-    "anmalan";
+    "anmalan"
+    "startnummer-boking";
 }
 #sponsors {
   grid-area: sponsor;
@@ -226,7 +229,8 @@ section.fb-page {
       "sponsor sponsor"
       "mkr-schema fb-page"
       "showcase showcase"
-      "anmalan anmalan";
+      "anmalan anmalan"
+      "startnummer-boking startnummer-boking";
     margin-top: 0;
   }
   section {
@@ -285,6 +289,14 @@ section.fb-page {
   .wide-list {
     display: block;
   }
+
+  /* ---Startnummerbokning--- */
+  #startnummer-bokning-section div.wide-list{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  /* ---Startnummerbokning--- */
+
   .skinny-list {
     display: none;
   }
@@ -293,6 +305,7 @@ section.fb-page {
   section {
     padding-top: 25px;
   }
+
   .large-icon {
     display: none;
   }
@@ -306,7 +319,7 @@ section.fb-page {
 /* --- Anmälningssida --- */
 #tavlingar-section {
   grid-area: anmalan;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
@@ -318,11 +331,12 @@ section.fb-page {
   background-color: #fff;
 }
 .anmalan-nav {
-  background-color: var(--nav-menu-color);
+  /* background-color: var(--nav-menu-color); */
   display: flex;
   padding: 10px;
 }
 .anmalan-nav a {
+  background-color: var(--nav-menu-color);
   padding: 10px;
   border: solid thin black;
   margin-right: 5px;
@@ -420,4 +434,32 @@ section.fb-page {
 .list-item {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+/* ----------Startnummer--------- */
+#startnummer-bokning-section {
+  grid-area: startnummer-boking;
+  background-color: var(--background-color);
+  padding: 10px;
+  margin-top: 20px;
+}
+.startnummer-bokning-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+.startnummer-bokning-list li {
+  margin: 5px;
+  min-width: 180px;
+  max-width: 400px;
+}
+.startnummer-bokning-list li a div {
+  display: flex;
+  text-decoration: none;
+  border: solid thin gray;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.startnummer-bokning-list li a div:hover{
+  background-color: var(--button-hover-color);
 }
