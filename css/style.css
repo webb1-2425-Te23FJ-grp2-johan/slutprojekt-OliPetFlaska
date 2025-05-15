@@ -96,11 +96,11 @@ footer a {
 }
 
 #nav-menu {
-  background-color: var(--nav-menu-color);
-  padding: 20px;
   position: fixed;
+  background-color: var(--nav-menu-color);
   top: 0;
   left: 0;
+  padding: 20px;
   width: 100%;
   height: 100%;
   transform: translateX(-100%);
@@ -130,9 +130,7 @@ nav ul li a {
   color: #333;
   font-size: 1.1rem;
   transition: background-color 0.2s ease;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent; /* Gör den symmetrisk */
-  border-bottom: 2px solid transparent;
+   border: 3px solid transparent;  /* Gör så den inte flyttar på sig*/
 }
 .small-icon {
   display: flex;
@@ -161,7 +159,7 @@ main {
     "mkr-schema"
     "fb-page"
     "anmalan"
-    "startnummer-boking";
+    "startnummer-bokning";
 }
 #sponsors {
   grid-area: sponsor;
@@ -235,8 +233,6 @@ section.fb-page {
 }
 .anmalan-nav {
   display: flex;
-  /* align-items: center; */
-  padding: 10px;
 }
 .anmalan-nav a {
   background-color: var(--nav-menu-color);
@@ -317,8 +313,8 @@ section.fb-page {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr; /* Tailwind's grid-cols-1 */
-  gap: 1rem; /* Tailwind's gap-8 */
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 .card {
   background-color: #fff;
@@ -339,8 +335,8 @@ section.fb-page {
 }
 /* ----------Startnummer--------- */
 #startnummer-bokning-section {
-  grid-area: startnummer-boking;
-  background-color: var(--background-color);
+  grid-area: startnummer-bokning;
+  background-color: #fff;
   padding: 10px;
   margin-top: 20px;
 }
@@ -390,7 +386,7 @@ section.fb-page {
       "mkr-schema fb-page"
       "showcase showcase"
       "anmalan anmalan"
-      "startnummer-boking startnummer-boking";
+      "startnummer-bokning startnummer-bokning";
     margin-top: 0;
   }
   section {
