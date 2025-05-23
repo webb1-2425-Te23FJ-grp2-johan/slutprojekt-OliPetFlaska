@@ -457,7 +457,7 @@ section.fb-page {
 
   /* ---Resultatsida--- */
   .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Tailwind's md:grid-cols-2 */
+    grid-template-columns: repeat(2, 1fr);
   }
   /* ---Table sida--- */
   .table-header th {
