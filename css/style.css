@@ -102,14 +102,11 @@ footer a {
   width: 100%;
   height: 100%;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
   z-index: 1000;
 }
-
 #nav-menu.show {
   transform: translateX(0);
 }
-
 #navbar-ul {
   list-style: none;
   padding: 10px 0;
