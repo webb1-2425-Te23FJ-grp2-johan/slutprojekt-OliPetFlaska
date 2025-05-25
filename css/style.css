@@ -363,11 +363,9 @@ section.fb-page {
   /* ---Table sida--- */
   .table-header th {
     font-size: 0.8rem;
-    /* padding: 10px; */
   }
   .table-row td {
     font-size: 0.7rem;
-    /* padding: 10px; */
   }
 }
 @media (min-width: 700px) {
